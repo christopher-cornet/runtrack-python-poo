@@ -1,34 +1,45 @@
 class Personnage:
     def __init__(self, x, y):
+        # Init x et y
         self.x, self.y = x, y
-        print('x =', x)
-        print('y =', y)
+        # Plateau de jeu
+        self.tableau = [[1,2,3],[4,5,6],[7,8,9]]
+        self.pos = self.tableau[self.x][self.y]
 
     def haut(self):
         self.y -= 1
-        print('Haut: y =', self.y)
+        self.pos = self.tableau[self.x][self.y]
 
     def bas(self):
         self.y += 1
-        print('Bas: y =', self.y)
+        self.pos = self.tableau[self.x][self.y]
 
     def gauche(self):
         self.x -= 1
-        print('Gauche: x =', self.x)
+        self.pos = self.tableau[self.x][self.y]
 
     def droite(self):
         self.x += 1
-        print('Droite: x =', self.x)
+        self.pos = self.tableau[self.x][self.y]
 
     def position(self):
-        tuple_coordonnees = (self.x, self.y)
-        print('Position du personnage:', tuple_coordonnees)
+        emplacement = (self.x, self.y)
+        print('Position du personnage:', emplacement)
         
-personnage1 = Personnage(10, 30)
+personnage1 = Personnage(0, 0)
+
+personnage1.droite()
+personnage1.droite()
+personnage1.position()
+
+personnage1.bas()
+personnage1.bas()
+personnage1.position()
+
+personnage1.gauche()
+personnage1.gauche()
+personnage1.position()
 
 personnage1.haut()
-personnage1.bas()
-personnage1.gauche()
-personnage1.droite()
-
+personnage1.haut()
 personnage1.position()

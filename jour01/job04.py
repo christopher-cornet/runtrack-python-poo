@@ -1,10 +1,10 @@
 class Personne:
-    def __init__(self):
-        pass
+    def __init__(self, prenom, nom):
+        self.prenom = prenom
+        self.nom = nom
 
-    def SePresenter(self, nom, prenom):
-        print('Je suis', prenom, nom)
-        return nom, prenom
+    def SePresenter(self):
+        print('Je suis', self.prenom, self.nom)
     
-personne1 = Personne()
-personne1.SePresenter('cornet', 'christopher')
+personne1 = Personne('Christopher', 'Cornet')
+personne1.SePresenter()
