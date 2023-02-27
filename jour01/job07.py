@@ -25,9 +25,11 @@ class Personnage:
     def position(self):
         emplacement = (self.x, self.y)
         print('Position du personnage:', emplacement)
-        
+
+# Instance de personnage, coordoonées x, y = 0, 0 
 personnage1 = Personnage(0, 0)
 
+# Déplacer le personnage et position print les coordonées
 personnage1.droite()
 personnage1.droite()
 personnage1.position()

@@ -42,7 +42,7 @@ cercle1.circonference()
 cercle1.aire()
 cercle1.afficherInfos()
 
-print() # Espacement
+print() # Espacement (pour la lisibilité mais pas obligatoire)
 
 # Circonférence, aire et diamètre cercle2
 cercle2 = Cercle(7)
@@ -53,7 +53,7 @@ cercle2.aire()
 cercle2.afficherInfos()
 
 # Changer rayon
-print() # Espacement
+print() # Espacement (pour la lisibilité mais pas obligatoire)
 print('Changer rayon:')
 cercle1.changerRayon(15)
 cercle2.changerRayon(25)

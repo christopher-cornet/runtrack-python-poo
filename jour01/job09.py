@@ -7,7 +7,9 @@ class Produit:
     # retourne le prix produit avec la TVA.
     def CalculerPrixTTC(self):
         prix_ttc = self.prixHT / 100 * 5.5
-        return prix_ttc
+        prix = self.prixHT - prix_ttc
+        # return le prix avec la TVA
+        return prix
 
     # la méthode “afficher” qui liste l’ensemble des informations du produit.
     def afficher(self):
@@ -26,7 +28,7 @@ produit1.CalculerPrixTTC()
 produit2 = Produit('Ordinateur', 1500, 10)
 produit2.CalculerPrixTTC()
 
-# TVA
+# Prix TTC
 print(produit1.CalculerPrixTTC())
 print(produit2.CalculerPrixTTC())
 
