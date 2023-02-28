@@ -1,22 +1,22 @@
 class Livre:
-    def __init__(self):
-        self.__title = 'Harry Potter'
-        self.__author = 'J. K. Rowling'
-        self.__nbpages = 11.5
+    def __init__(self, title, author, nbpages):
+        self.__title = title
+        self.__author = author
+        self.__nbpages = nbpages
 
     def getbook(self):
         return self.__title, self.__author, self.__nbpages
     
-    def setbook(self):
-        if self.__nbpages < 0 or type(self.__nbpages != int):
-            print('Erreur, le nombre doit être un nombre entier positif.')
-            return self.__title, self.__author, self.__nbpages
-        else:
-            self.__nbpages = 500
-            return self.__title, self.__author, self.__nbpages
+    def setbook(self, title2, author2, nbpages2):
+        self.__title = title2
+        self.__author = author2
+        if nbpages2 > 0:
+            if type(nbpages2) is int:
+                self.__nbpages = nbpages2
+        return self.__title, self.__author, self.__nbpages
     
-newBook = Livre()
+newBook = Livre('Germinal', 'Émile Zola', 250)
 
 print('Get:', newBook.getbook())
 
-print('Set:', newBook.setbook())
+print('Set:', newBook.setbook('Steve Jobs', 'Walter Isaacson', 420))
