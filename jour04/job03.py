@@ -12,24 +12,31 @@ class Rectangle:
         # Longueur * largeur
         somme = self.__longueur * self.__largeur
         return somme
+    
+    def getlongueur(self):
+        return self.__longueur
+    
+    def getlargeur(self):
+        return self.__largeur
 
 class Parallélépipède(Rectangle):
     def __init__(self, longueur, largeur, hauteur):
         super().__init__(longueur, largeur)
         self.hauteur = hauteur
 
-    def getvolume(self):
-        return self.__longueur, self.__largeur, self.hauteur
-
     def volume(self):
         # multiplier longueur, largeur, hauteur
-        somme = self.__longueur * self.__largeur * self.hauteur
+        self.longueur = self.getlongueur()
+        self.largeur = self.getlargeur()
+        somme = self.longueur * self.largeur * self.hauteur
         return somme
 
 rect = Rectangle(5, 10)
+
+parallélépipède1 = Parallélépipède(5, 10, 15)
 
 print('Périmètre:', rect.périmètre())
 
 print('Surface:', rect.surface())
 
-print('Volume:', Parallélépipède.volume())
+print('Volume:', parallélépipède1.volume())
