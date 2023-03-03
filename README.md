@@ -1,6 +1,6 @@
 # Runtrack Python POO
 
-### La runtrack POO nous permet d'apprendre la programmation orientée objet.
+### La runtrack POO nous permet d'apprendre la programmation orientée objet grâce à différents exercices.
 
 Le 1er jour: Les classes, attributs, instances, constructeur. 
 
